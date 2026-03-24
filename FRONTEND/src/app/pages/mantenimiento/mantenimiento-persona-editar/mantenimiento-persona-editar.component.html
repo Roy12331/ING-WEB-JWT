@@ -1,0 +1,62 @@
+<div class="card border-0 shadow-sm">
+  <div class="card-header bg-primary text-white py-3">
+    <h3 class="h5 mb-0">{{ modo() === 'editar' ? 'Actualizar Registro' : 'Nueva Persona' }}</h3>
+  </div>
+
+  <div class="card-body">
+    <form [formGroup]="form" class="row g-3" (ngSubmit)="onGuardar()">
+      
+      <div class="col-12 col-md-6">
+        <label class="form-label fw-bold">Tipo Documento</label>
+        <select class="form-select" formControlName="idTipoDocumento">
+          <option [value]="0">-- Seleccione --</option>
+          @for (t of tiposDocumentos(); track t.id) {
+            <option [value]="t.id">{{ t.descripcion }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <label class="form-label fw-bold">Sexo</label>
+        <select class="form-select" formControlName="idTipoSexo">
+          <option [value]="0">-- Seleccione --</option>
+          @for (s of tiposSexos(); track s.id) {
+            <option [value]="s.id">{{ s.descripcion }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <label class="form-label fw-bold">Nombres</label>
+        <input type="text" class="form-control" formControlName="nombres" placeholder="Ej. Juan" />
+      </div>
+
+      <div class="col-12 col-md-6">
+        <label class="form-label fw-bold">Apellido Paterno</label>
+        <input type="text" class="form-control" formControlName="apellidoPaterno" />
+      </div>
+
+      <div class="col-12 col-md-6">
+        <label class="form-label fw-bold">Apellido Materno</label>
+        <input type="text" class="form-control" formControlName="apellidoMaterno" />
+      </div>
+
+      <div class="col-12 col-md-6">
+        <label class="form-label fw-bold">Teléfono</label>
+        <input type="text" class="form-control" formControlName="telefono" />
+      </div>
+
+      <div class="col-12">
+        <label class="form-label fw-bold">Dirección</label>
+        <input type="text" class="form-control" formControlName="direccion" />
+      </div>
+
+      <div class="col-12 d-flex justify-content-end gap-2 mt-4">
+        <button type="button" class="btn btn-secondary" (click)="onCancelar()">Cancelar</button>
+        <button type="submit" class="btn btn-primary" [disabled]="cargando">
+          {{ cargando ? 'Procesando...' : 'Guardar Datos' }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

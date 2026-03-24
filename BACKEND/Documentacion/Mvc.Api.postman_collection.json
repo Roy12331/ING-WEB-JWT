@@ -1,0 +1,315 @@
+{
+  "info": {
+    "name": "Mvc.Api CRUD",
+    "description": "Colección CRUD para Persona, PersonaTipoDocumento, PersonaTipo, PersonaTipoSangre y PersonaTipoSexo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5132"
+    }
+  ],
+  "item": [
+    {
+      "name": "PersonaTipoDocumento",
+      "item": [
+        {
+          "name": "Get All",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/PersonaTipoDocumento"
+          }
+        },
+        {
+          "name": "Get By Id",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/PersonaTipoDocumento/1"
+          }
+        },
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"codigo\": \"CE\",\n  \"descripcion\": \"Carnet de Extranjeria\"\n}"
+            },
+            "url": "{{baseUrl}}/api/PersonaTipoDocumento"
+          }
+        },
+        {
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1,\n  \"codigo\": \"DNI\",\n  \"descripcion\": \"Documento Nacional de Identidad\"\n}"
+            },
+            "url": "{{baseUrl}}/api/PersonaTipoDocumento"
+          }
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/PersonaTipoDocumento/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PersonaTipo",
+      "item": [
+        {
+          "name": "Get All",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/PersonaTipo"
+          }
+        },
+        {
+          "name": "Get By Id",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/PersonaTipo/1"
+          }
+        },
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"codigo\": \"ADM\",\n  \"descripcion\": \"Administrativo\"\n}"
+            },
+            "url": "{{baseUrl}}/api/PersonaTipo"
+          }
+        },
+        {
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1,\n  \"codigo\": \"EST\",\n  \"descripcion\": \"Estudiante Regular\"\n}"
+            },
+            "url": "{{baseUrl}}/api/PersonaTipo"
+          }
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/PersonaTipo/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PersonaTipoSangre",
+      "item": [
+        {
+          "name": "Get All",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/PersonaTipoSangre"
+          }
+        },
+        {
+          "name": "Get By Id",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/PersonaTipoSangre/1"
+          }
+        },
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"codigo\": \"B+\",\n  \"descripcion\": \"B Positivo\"\n}"
+            },
+            "url": "{{baseUrl}}/api/PersonaTipoSangre"
+          }
+        },
+        {
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1,\n  \"codigo\": \"O+\",\n  \"descripcion\": \"O Positivo Compatibilidad Universal\"\n}"
+            },
+            "url": "{{baseUrl}}/api/PersonaTipoSangre"
+          }
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/PersonaTipoSangre/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PersonaTipoSexo",
+      "item": [
+        {
+          "name": "Get All",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/PersonaTipoSexo"
+          }
+        },
+        {
+          "name": "Get By Id",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/PersonaTipoSexo/1"
+          }
+        },
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"codigo\": \"X\",\n  \"descripcion\": \"No Especificado\"\n}"
+            },
+            "url": "{{baseUrl}}/api/PersonaTipoSexo"
+          }
+        },
+        {
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1,\n  \"codigo\": \"M\",\n  \"descripcion\": \"Masculino Biologico\"\n}"
+            },
+            "url": "{{baseUrl}}/api/PersonaTipoSexo"
+          }
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/PersonaTipoSexo/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Persona",
+      "item": [
+        {
+          "name": "Get All",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/Persona"
+          }
+        },
+        {
+          "name": "Get By Id",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/Persona/1"
+          }
+        },
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idTipoDocumento\": 1,\n  \"idPersonaTipo\": 1,\n  \"idTipoSexo\": 1,\n  \"idTipoSangre\": 1,\n  \"nombres\": \"Carlos\",\n  \"apellidoPaterno\": \"Vargas\",\n  \"apellidoMaterno\": \"Diaz\",\n  \"direccion\": \"Jr. Los Olivos 123\",\n  \"telefono\": \"900123456\",\n  \"userCreate\": 1\n}"
+            },
+            "url": "{{baseUrl}}/api/Persona"
+          }
+        },
+        {
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1,\n  \"idTipoDocumento\": 1,\n  \"idPersonaTipo\": 2,\n  \"idTipoSexo\": 1,\n  \"idTipoSangre\": 1,\n  \"nombres\": \"Juan Actualizado\",\n  \"apellidoPaterno\": \"Perez\",\n  \"apellidoMaterno\": \"Lopez\",\n  \"direccion\": \"Av. Demo 999\",\n  \"telefono\": \"999111333\",\n  \"userCreate\": 1,\n  \"userUpdate\": 1\n}"
+            },
+            "url": "{{baseUrl}}/api/Persona"
+          }
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/Persona/1"
+          }
+        }
+      ]
+    }
+  ]
+}
